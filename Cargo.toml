@@ -1,0 +1,8 @@
+[workspace]
+members = [
+  "crates/themis-host",
+  "crates/themis-protocol",
+  "crates/themis-state",
+]
+resolver = "2"
+
