@@ -1,0 +1,32 @@
+# Canonical Semantic upstream binding for Themis.
+#
+# Themis is not a standalone runtime. Its compiler, SemCode format, verifier,
+# runtime core, and VM are supplied by the Semantic repository identified here.
+# Reproducible builds must resolve the exact revision below rather than a
+# floating branch head.
+
+schema_version = 1
+
+[source]
+repository = "https://github.com/skulmakov-oss/Semantic"
+branch = "main"
+revision = "56332a7e522f9d1c37085b87ebee7008e1f0334f"
+license = "Apache-2.0"
+
+[toolchain]
+compiler_binary = "smc"
+source_extension = ".sm"
+artifact_extension = ".smc"
+
+[runtime]
+required_packages = [
+  "sm-format",
+  "sm-verify",
+  "sm-runtime-core",
+  "sm-vm",
+]
+
+[policy]
+require_exact_revision = true
+allow_floating_branch_for_release = false
+vendor_semantic_sources = false
